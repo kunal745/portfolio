@@ -1,0 +1,800 @@
+<html>
+    <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Portfolio</title>
+	<link rel="icon" type="image/x-icon" href="C:\Users\HP\Desktop\my portfolio\portfolio images\kg_logo1-removebg-preview.png">
+
+        <style>
+		/*online black wallpaper link:*/
+/*https://img.pixers.pics/pho_wat(s3:700/FO/45/74/17/63/700_FO45741763_737d75d86ecb3c075439a6840945e42e.jpg,649,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,429,650,jpg)/bath-mats-black-wallpaper.jpg.jpg*/
+			
+			html 	/*	smooth scroll in case I applied any bookmark(css bookmark)	*/
+			{
+				scroll-behavior: smooth;
+			}
+			.body
+			{
+				background-image:url("././portfolio images/bath-mats-black-wallpaper.png");
+			}
+										  /*	 SCROLLBAR STYLES(stackoverflow.com)    */			
+			body::-webkit-scrollbar 	  
+			{
+				width: 10px;				  /*	 thickness of horizontal and vertical scrollbars specified by width and height properties.		*/
+				height:10px;
+				background-color:black;	/*	change color to blue to see effect	*/
+			}
+			body::-webkit-scrollbar-track  
+			{
+				border-radius:50px;
+				padding: 2px 0;
+			}
+			body::-webkit-scrollbar-thumb	/* to specifically edit horizontal or vertical scrollbars,put ::-webkit-scrollbar-thumb:horizontal/vertical (from-stackoverflow.com) */
+			{
+				border-radius: 10px;
+				width:8px;
+				background-color: #5cf2e6;
+				/*border: 3px solid yellow;*/
+			}
+			body::-webkit-scrollbar-thumb:vertical	/* to specifically edit horizontal or vertical scrollbars,put ::-webkit-scrollbar-thumb:horizontal/vertical (from-stackoverflow.com) */
+			{
+				right:50px;
+			}
+            /* div::-webkit-scrollbar-button		to show scrollbar buttons	
+            {
+                background-color:green;
+                height:5px;
+				border-radius:10px;
+		    } */
+
+			/*							########		WE CAN ALSO ADD SCROLLBAR LIKE THIS WAY(from browser->scrollbar colors->geekforgeeks)	#######
+			.scrollbar-colored {
+			  scrollbar-color: red green;
+			  height: 150px;
+			  width: 200px;
+			  overflow-y: scroll;
+			  background-color: lightgreen; 
+			}*/
+            .nav-div-1
+            {
+				z-index:1;		/* place elemtent over another element*/
+				position:sticky;
+				top:0;
+				display: flex;
+				justify-content: flex-end;
+				color:red;
+				margin-bottom:30px;
+				background-color:rgb(161, 207, 205);
+				height:40px;
+				align-items:center;
+				font-weight:bold;
+				font-size:20px;
+				border-radius:150px;
+				/* border:3px solid yellow; */
+            }
+			.nav-divs
+			{
+				/* border:3px solid yellow; */
+				width:25%;
+				text-align:center;
+				float:center;
+				
+			}
+			
+			.nav-divs:hover
+			{
+				background-color:#d65a66;
+				border:2px solid #d65a66;
+				border-radius:50px;
+				color:white;
+				font-size:25px;
+			}
+			.nav-a 
+			{ 
+				color:red;
+				text-decoration:none;
+			}
+			.nav-a:hover 
+			{
+				color:white;
+				font-size:25px;
+				animation:slow;
+			}
+			
+			#main-div
+            {
+				margin-left:20px;
+				padding-left:30px;
+				padding-top:50px;
+				padding-bottom:-90px;
+				padding-right:30px;
+				height:400px;
+				width:90%;
+				display:flex;
+				justify-content:space-around;
+				margin-bottom:50px;
+				/* border:2px solid yellow; */
+            }
+			#main-div-1 
+			{
+				font-size:80px;
+				width:60%;
+				color:white;
+				font-size:25px;
+				text-align:center;
+				line-height:40px;
+				/* border:2px solid yellow; */
+			}
+			.main-div-2
+			{
+				width:40%;
+				color:white;
+				/* border:2px solid white; */
+				padding-left:145px;
+				margin-left:0px;
+				margin-top:-30px;
+				font-size:35px;
+				line-height:25px;
+				height:250px;
+				text-align: justify;
+				text-justify: auto;
+				/*background-image:url('https://img.pixers.pics/pho_wat(s3:700/FO/45/74/17/63/700_FO45741763_737d75d86ecb3c075439a6840945e42e.jpg,649,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,429,650,jpg)/bath-mats-black-wallpaper.jpg.jpg');*/
+			}
+			
+			#nav-div-2 
+			{
+				/*border:2px solid white;*/
+				display: flex;
+				flex:wrap;
+				align-items:center;
+				color:red;
+				margin-bottom:30px;
+				height:40px;
+				font-weight:bold;
+				font-size:40px;
+				margin-left:25px;
+				margin-right:100px;
+			}
+			.nav-divs-img
+			{
+				width:50px;
+				justify-content:center;
+				text-align:center;
+				float:right;
+				margin:7px;
+			}
+			.img
+			{
+				width:35px;
+				height:35px;
+			}
+			.img:hover 
+			{	
+				height:45px;
+				width:45px;
+				animation-duration: 3s;
+			}
+			.personal-info
+			{
+				
+				background-size:cover;
+				opacity:0.5;
+				height:380px;
+				padding-left:20px;
+				width:80%;
+				margin-left:130px;
+				color:white;
+				border-radius:0px 50px 0px 50px;
+			}
+			#personal-info-black-background
+			{
+				overflow:auto;	
+				/*overflow:hidden;*/	/*1st step of showing and hiding scrollbar when mouse is hovered over div*/	
+				height:400px;
+				margin-top:20px;
+				width:90%;
+				margin-left:auto;
+				margin-right:auto;
+				/* background-image:url("bath-mats-black-wallpaper.jpg"); */
+			}
+			#personal-info-black-background:hover
+			{
+				overflow:auto;			/*2nd step of showing and hiding scrollbar when mouse is hovered over div*/
+
+			}
+			p.keyframe-p
+			{
+				opacity:1;
+				/* border:2px solid yellow; */
+			}
+			#personal-info-black-background::-webkit-scrollbar-track  /*	 scrollbar styles 	*/
+			{
+				border-radius:50px;
+				padding: 2px 0;
+				background-color: transparent;
+				visibility:visible;
+
+			} 
+			#personal-info-black-background::-webkit-scrollbar 
+			{
+				width: 10px;
+				height:7px;
+				scroll-margin:-50px;
+			}
+			#personal-info-black-background::-webkit-scrollbar-thumb
+			{
+				border-radius: 5px;
+				width:5px;
+				background-color: lightgreen;
+				/*border: 3px solid yellow;*/
+			}
+			/* 			 
+			#personal-info-black-background::-webkit-scrollbar-button
+			{
+				border-radius: 0px;
+				width:0px;
+				height:10px;
+				background-color:  green;
+				border: 3px solid yellow;
+			}			
+			*/
+			
+			
+			#personal-info-div
+			{
+				
+				padding:30px;
+				font-size:50px;
+				overflow-y:scroll;
+				transition:linear 0.5s;
+			}
+			#personal-info-div:hover 			/*###### transition on list div ######*/
+			{
+				 padding-left:10px;
+			}
+			.personal-info-div li
+			{
+				color:lightgreen;
+				font-size:30px;
+				text-align:left;
+				padding-left:100px;
+			}
+			.personal-info-div0
+			{
+				height:150px;
+				width:90%;
+				padding:45px;
+				font-size:50px;
+				animation: myinfo 2s infinite;
+				animation-direction: alternate-reverse;				/*##############APPLY TRANSITION####################*/
+			}
+			.personal-info-div1
+			{
+				height:150px;
+				width:90%;
+				padding:45px;
+				font-size:50px;
+			}
+			.personal-info-div2
+			{
+				height:150px;
+				width:90%;
+				padding:45px;
+				font-size:50px;
+			}
+			#personal-info-div3
+			{
+				width:100%;				
+			}
+			#personal-info-div3 img 
+			{
+				width:200px;
+				padding:10px;
+				height:200px;
+				margin-top:-50px;
+			}	
+			#skills-black-background
+			{
+				/* background-image:url("bath-mats-black-wallpaper.jpg");		 */
+				opacity: 0.9;
+			}
+			#skills
+			{
+				width:100%;
+				/*opacity:0.5;*/
+				height:350px;
+				padding-top:30px;
+				padding-left:0px;
+				text-align:center;
+				font-size:25px;
+				/* margin:auto; */
+				color:blue;
+				/* border:2px solid yellowgreen; */
+
+				justify-content:space around;
+				border-radius:50px 0px 50px 0px;
+			}
+			.skills-img 
+			{
+				/* display:flex; */
+				margin-top:0px;
+				justify-content:space-around;
+				height:100px;
+				width:100px;
+				border-radius:15px;
+				/* border:3px solid rgb(0, 255, 17); */
+			}
+			.skills-img:hover
+			{
+				box-shadow:2px 2px 10px 10px blue;
+				/* border:10px solid yellow; */
+			}
+			/* .skills-a
+			{
+				text-decoration:none;
+				color:rgb(220, 91, 91);
+				
+			} */
+			.skills-ul
+			{
+				display:flex;
+				margin-top:10px;
+				width:100%;
+				text-align:center;
+				color:white;
+				font-weight:bold;
+				align-items:center;
+				list-style-type:none;
+				font-size:20px;
+				/* border:2px solid yellow; */
+			}
+			.flex 
+			{
+				display:flex;
+				justify-content:space-around;
+				margin-top:0px;
+				border:2px s/olid red;
+			}
+			.skills-ul li
+			{
+
+				width:20%;
+				height:50px;
+			}
+			
+			.tooltip 
+			{
+				position: relative;
+				display: inline;
+				width:auto;
+				
+			}
+			.tooltip .tooltiptext 
+			{
+				visibility: hidden;
+				width:auto;
+				background-color: rgb(70, 55, 211);
+				color: #fff;
+				text-align: center;
+				padding: 5px 0;
+				border-radius: 6px;
+				position: absolute;
+				z-index: 1;
+				bottom:100%;
+				left:0%;
+				margin-left:-60px;
+			}
+			.tooltip:hover .tooltiptext 
+			{
+				padding:5px;
+				visibility: visible;
+			}
+			
+			.div-contact-main-div
+			{
+				/* background-color: */
+				/* border:2px solid yellow; */
+				height:300px;
+				width:90%;
+				padding-left:50px;
+				margin-left:40px;
+				
+			}
+			.div-contact-heading
+			{
+				height:50px;
+				width:100%;
+				font-size:50px;
+				color:white;
+				padding-bottom:20px;
+			}
+			/* .div-contact-flex
+			{
+				display:flex;
+				justify-content:space-around;
+			} */
+			.div-contact-1
+			{
+				padding:5px;
+				width:5%;
+				height:70%;
+				/* border:2px solid yellow; */
+			}
+			.div-contact-1-imgs
+			{
+				height:35px;
+				width:35px;
+				margin-top:15px;
+				border-radius:10px;
+				/* border:5px solid black; */
+				
+			}
+			.div-contact-1-imgs:hover
+			{
+				
+				height:45px;
+				width:45px;
+				
+			}
+			.div-contact-imgs
+			{
+				width:100%;
+				height:100%;
+			}
+			.div-contact-2
+			{
+				overflow-y:auto;
+				margin-left:20px;
+				padding-left:100px;
+				padding-top:5px;
+				font-size:50px;
+				width:1000px;
+				height:230px;
+				/* border:2px solid yellow; */
+			}
+			.div-contact-2::-webkit-scrollbar
+			{
+				width:10px;
+			}
+			.div-contact-2::-webkit-scrollbar-track
+			{
+				background-color:transparent;
+			}
+			.div-contact-2::-webkit-scrollbar-thumb
+			{
+				background-color:yellow;
+				border-radius:10px;
+			}
+			table 
+			{
+				height:250px;
+				width:90%;
+				padding:5px;
+				/* border:2px solid red; */
+			}
+			td
+			{
+				font-size:20px;
+				width:30%;
+				/* border:2px solid yellow; */
+			}
+			.last-div 
+			{
+				
+				width:100%;
+				display:flex;
+				align-items:center;
+				/* border:2px solid rgb(128, 199, 128); */
+			}
+			.last-div-1
+			{
+				height:40px;
+				color:white;
+				width:5%;
+				font-size:25px;
+				/* align-items:center; */
+				text-align:center;
+				/* border:2px solid rgb(128, 199, 128); */
+			}
+			.last-div-2
+			{
+				height:40px;
+				width:90%;
+				display:flex;
+				align-items:center;
+				justify-content:space-around;
+				/* border:2px solid rgb(128, 199, 128); */
+				
+			}
+			.last-div-imgs
+			{
+				height:100%;
+				width:100%;
+			}
+			
+			.input
+			{
+				width:60%;
+				height:25px;
+				/* border:2px solid red; */
+				border-radius:5px;
+			}
+
+			.blink 						/*	  blink text		*/
+			{
+				animation: blinker 1s  infinite;
+				color: white;
+				font-size:45px;
+				font-family: sans-serif;
+			}
+			@keyframes blinker 
+			{
+				100% 
+				{
+				color:black;
+					opacity: 0;
+				}
+			}
+			
+			.keyframe-nav-divs /*class name*/
+			{
+			  position: relative;
+			  animation: mymoves 2s infinite;
+			  animation-direction: alternate-reverse;
+			}
+			@keyframes mymoves 
+			{
+				from {color: red;}
+				to {color:orange;}
+			}
+			
+			.main-div-2 img 								/*class name*/
+			{
+			 border-radius:10px;
+			 animation: mymoved 3.5s infinite;
+			 animation-direction: alternate-reverse;
+			}
+			@keyframes mymoved
+			{
+				from {border:8px solid #b8bd5b;}
+				to {border:8px solid #13626e;}
+			}
+			
+			
+			.keyframe-p 									/*class name on which css is applied*/
+			{
+			 /* z-index:0;								place elemtent over another element	 */
+			 width:100%;
+			 /* border:2px solid yellow; */
+			 /* position:sticky; */
+			 font-size:70px;
+			 margin-top:0px;
+			 top:0;
+			 /* background-image:url("././portfolio images/bath-mats-black-wallpaper.png");		 css images locations	 */
+			 height:80px;
+			 /* position:sticky;								POSITION:STICKY GIVEN TO HEADING	 */
+			 animation: mymove 2s infinite alternate-reverse;
+			}
+			@keyframes mymove 
+			{
+				from {color:red;}
+				to {color:orange;}
+			}
+        </style>
+    </head>
+    <body class="body" id="body-bookmark">
+	    <div class="nav-div-1">
+	        <div class="nav-divs">
+	           <a class="nav-a keyframe-nav-divs" href="#body-bookmark">Home</a>
+	        </div>
+	        <div class="nav-divs">
+	            <a class="nav-a keyframe-nav-divs" href="#about-bookmark">About</a>
+	        </div>
+	        <div class="nav-divs">
+	            <a class="nav-a keyframe-nav-divs" href="#feedback-bookmark">Feedback/Query</a>
+	        </div>
+	        <div class="nav-divs">
+	            <a class="nav-a keyframe-nav-divs" href="#">Resume</a>
+	        </div>
+			<div class="nav-divs">
+	            <a class="nav-a keyframe-nav-divs" href="#contact-bookmark">Contact</a>
+	        </div>
+	    </div>
+		
+		<div id="main-div">
+			<div id="main-div-1">
+				<span style="font-size:40px;">About Myself: </span>
+				<br><br>
+					I am currently working as an undergraduate student in Chitkara University, Punjab
+					and I have chosen Computer Engineering stream in B.tech course for my career.
+					I love to create different beautiful websites and exploring new things and finding 
+					different possible solutions to a problem..
+			</div>		
+			<div class="main-div-2">
+				<img style="border-radius:50%;margin-top:-30px;height:300px;width:300px;" src="D:\CHITKARA\softwares and programs\my photo.jpg">
+				<br><br>
+				<span style="color:white;margin-left:60px;font-size:30px;line-height:50px;"><code>I'm KUNAL..</code></span>
+				<br>
+				<span style="color:white;margin-left:25px;font-size:30px;"><code>Software Developer</code><span class="blink">|</span></span>
+				<br><br>
+				<div id="nav-div-2">
+					<div class="nav-divs-img">
+						<a href="#"><img class="img" src="././portfolio images/fb.png"></a>
+					</div>
+					<div class="nav-divs-img">
+						<a href="#"><img class="img" src="././portfolio images/instagram.png"></a>
+					</div>
+					<div class="nav-divs-img">
+						<a href="#"><img class="img" src="././portfolio images/linkedin.png"></a>
+					</div>
+					<div class="nav-divs-img">
+						<a href="#"><img class="img" src="././portfolio images/twitter.png"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+		
+		<div id="personal-info-black-background">
+			<div class="personal-info" id="about-bookmark">				
+				<p style="text-align:center;" class="keyframe-p">Here's my Personal Info!</p>
+				<div class="personal-info-main-div" >
+					<div class="personal-info-div0">Personal Details
+						<ul class="personal-info-div">
+							<li>Occupation: Undergraduate Student</li>
+							<li>Contact: 9463834010</li>
+							<li>Email: kunal0403.be20@chitkara.edu.in</li>
+						</ul>
+					</div>
+					<div class="personal-info-div1">Academic Qualification
+						<ul class="personal-info-div">
+							<li>Secondary From CBSE Board.</li>
+							<li>Sr.Secondary From CBSE Board.</li>
+							<li>C.S.E from Chitkara University.</li>
+						</ul>
+					</div>
+					<div class="personal-info-div2">Achievements/Honors
+						<ul class="personal-info-div">
+							<li>Handwriting Competetion</li>
+							<li>National Maths and English talent skills.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br><br><br>
+
+		<div id="skills-black-background">
+			<div id="skills">Get to know about <br><p class="keyframe-p">&nbsp;&nbsp;"Skills in Me.."</p>
+				<div class="flex">
+						<ul class="skills-ul">
+						<li>
+							<a class="skills-a tooltip" href="#">
+								<img class="skills-img" src="C:\Users\HP\Desktop\my portfolio\portfolio images\html.png">
+								<div class="tooltiptext">Lorem ipsum</div>
+							</a>
+						</li>
+						<li>
+							<a class="skills-a tooltip" href="#">
+								<img class="skills-img" src="C:\Users\HP\Desktop\my portfolio\portfolio images\css.png">
+								<div class="tooltiptext">Lorem ipsum</div>
+							</a>
+						</li>
+						<li>
+							<a class="skills-a tooltip" href="#">
+								<img class="skills-img" src="C:\Users\HP\Desktop\my portfolio\portfolio images\js.png">
+								<div class="tooltiptext">Lorem ipsum</div>
+							</a>
+						</li>
+						<li>
+							<a class="skills-a  tooltip" href="#">
+								<img class="skills-img" src="C:\Users\HP\Desktop\my portfolio\portfolio images\c++.png">
+								<div class="tooltiptext">Lorem ipsum</div>
+							</a>
+						</li>
+						<li>
+							<a class="skills-a tooltip" href="#">
+								<img class="skills-img" src="C:\Users\HP\Desktop\my portfolio\portfolio images\python.png">
+								
+							</a>
+						</li>
+						</ul>
+				</div>
+			</div>
+		</div>
+		<br>
+		
+		<!--<div class="nav-div-2">
+					<div class="nav-divs-img">
+						<a href="#"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUpqkfj8crAV-5ziSxpJ9n2yZEQoJKUWFIQg&usqp=CAU"></img></a>
+					</div>
+					<div class="nav-divs-img">
+						<a href="#"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzLeyFZ9VhGKqAa-ciTAJzpG74VtgoW4Qemc1WjQs6h700HHYQTTV_BvnLtdTeY4A3DxA&usqp=CAU"></img></a>
+					</div>
+					<div class="nav-divs-img">
+						<a href="#"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNe9PDJQA4i-NFiWPY9VrOTyeJhO0v96u57g&usqp=CAU"></img></a>
+					</div>
+					<div class="nav-divs-img">
+						<a href="#"><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmbics8t3EtcDF6C_WVoS1O7lXLEBFZcozvloutKw5-EKUOLJzEQDmUD5nY5eYZpaE68I&usqp=CAU"></img></a>
+					</div>
+				</div>
+		</div>-->
+
+		<div class="div-contact-main-div">
+			<div class="div-contact-heading" id="feedback-bookmark">Feel Free to ask if you have any queries!</div>
+			<br>
+			<!-- <div class="div-contact-flex"> -->
+				<div class="div-contact-2">
+					<table>
+						<tr>
+							<td><label style="color:white">First Name:  </label></td>
+							<td><input style="width:100%" type="text" class="input" maxlength="10"></td>
+							<td style="color:white;text-align:center;">[ word limit:10 characters! ]</td>
+						</tr>
+						<tr>
+							<td><label style="color:white">Last Name:  </label></td>
+							<td><input style="width:100%" type="text" class="input" maxlength="10"></td>
+							<td style="color:white;text-align:center;">[ word limit:10 characters! ]</td>
+						</tr>
+						<tr>
+							<td><label style="color:white">Phone No.:  </label></td>
+							<td style="color:white;text-align:center;"><input style="width:100%" type="text" class="input"></td>
+						</tr>
+						<tr>
+							<td><label style="color:white">Email:  </label></td>
+							<td><input style="width:100%" type="text" class="input"></td>
+							<td style="color:white;text-align:center;">[ Your personal email id! ]</td>
+						</tr>
+						<tr>
+							<td><label style="color:white">Any Queries/Feedback:  </label></td>
+							<td colspan="2" ><textarea style="border-radius:5px;" type="text" rows="4" cols="44"></textarea></td>
+						</tr>
+						<tr>
+							<td colspan="5" style="text-align:right;"><button style="height:40px;font-size:15px;text-decoration:none;"><a href="#">Submit</a></button></td>
+						</tr>
+					</table>
+					
+				</div>
+			<!-- </div> -->
+		</div>
+
+		<br>
+		<br>
+
+		<div class="last-div">
+			<div class="last-div-1 keyframe-p" id="contact-bookmark">Stay Connected</div>
+			<div class="last-div-2">
+				<div class="div-contact-1-imgs tooltip">
+					<a href="#"><img class="last-div-imgs" src="././portfolio images/fb.png"></a>
+					<div class="tooltiptext">Go to Facebook</div>
+				</div>
+				
+				<div class="div-contact-1-imgs tooltip">
+					<a href="#"><img class="last-div-imgs" src="././portfolio images/instagram.png"></a>
+					<div class="tooltiptext">Go to Instagram</div>
+				</div>
+				<div class="div-contact-1-imgs tooltip">
+					<a href="#"><img class="last-div-imgs" src="././portfolio images/linkedin.png"></a>
+					<div class="tooltiptext">Go to LinkedIn</div>
+				</div>
+				<div class="div-contact-1-imgs tooltip">
+					<a href="#"><img class="last-div-imgs" src="././portfolio images/twitter.png"></a>
+					<div class="tooltiptext">Go to Twitter</div>
+				</div>
+				<div class="div-contact-1-imgs tooltip">
+					<a href="#"><img class="last-div-imgs" src="././portfolio images/github.png"></a>
+					<div class="tooltiptext">Go to Github</div>
+				</div>
+				<div class="div-contact-1-imgs tooltip">
+					<a href="#"><img class="last-div-imgs" src="././portfolio images/email.png"></a>
+					<div class="tooltiptext">E-mail address:	kunal0403.be20@chitkara.edu.in</div>
+				</div>
+				<div class="div-contact-1-imgs tooltip">
+					<a href="#"><img class="last-div-imgs" src="././portfolio images/phone-removebg-preview.png"></a>
+					<div class="tooltiptext">Call 9463834010</div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>
